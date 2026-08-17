@@ -21,6 +21,12 @@ tw-story {
   padding: 2% 15%;
 }
 
+@media (max-width: 600px) {
+    img {
+        width: 70vw !important;
+    }
+}
+
 h1 {
     font-size: 150%;
 }
@@ -55,7 +61,7 @@ tw-link{
     background-color: transparent;
     
     text-decoration: none;
-  display: inline;
+  display: inline-block;
 }
 
 a:hover,
@@ -131,7 +137,7 @@ How much do you like NOISE?
 (set: $kids&#39;s &quot;Miguel&quot;&#39;s &quot;score&quot; to it + 10)
 (set: $kids&#39;s &quot;Noah&quot;&#39;s &quot;score&quot; to it + 10)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;WHAT? I CAN&#39;T HEAR YOU, I&#39;M BEING TOO LOUD!&quot;)[
 (set: $kids&#39;s &quot;Tam&quot;&#39;s &quot;score&quot; to it + 20)
 (set: $kids&#39;s &quot;Tuan&quot;&#39;s &quot;score&quot; to it + 20)
@@ -149,7 +155,7 @@ It&#39;s time for the big musical number: how many lines do you sing?
 (set: $kids&#39;s &quot;Rashad&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Anthony&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;I would sing one quarter of the verses.&quot;)[
 (set: $kids&#39;s &quot;Gabby&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Tâm&quot;&#39;s &quot;score&quot; to it + 5)
@@ -158,7 +164,7 @@ It&#39;s time for the big musical number: how many lines do you sing?
 (set: $kids&#39;s &quot;Mavis&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Isabel&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;I would sing no verses at all... I&#39;m no singer!&quot;)[
 (set: $kids&#39;s &quot;Miguel&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Tuấn&quot;&#39;s &quot;score&quot; to it + 5)
@@ -182,12 +188,12 @@ Do you have any special skills?
 (set: $kids&#39;s &quot;Fatima&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Camila&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;Do I? Maybe you could help me think of something?&quot;)[
 (set: $kids&#39;s &quot;Anthony&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Diego&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;No, I don&#39;t know how to do ANYthing.&quot;)[
 (set: $kids&#39;s &quot;Miguel&quot;&#39;s &quot;score&quot; to it + 20)
 (goto:(str:$question))]
@@ -211,7 +217,7 @@ Be honest. What size shoes do you wear?
 (set: $kids&#39;s &quot;Camila&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Diego&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;Large&quot;)[
 (set: $kids&#39;s &quot;Hugo&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Tuấn&quot;&#39;s &quot;score&quot; to it + 5)
@@ -240,7 +246,7 @@ How many siblings do you have?
 (set: $kids&#39;s &quot;Fatima&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Rashad&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;At least three!&quot;)[
 (set: $kids&#39;s &quot;Mavis&quot;&#39;s &quot;score&quot; to it + 20)
 (set: $kids&#39;s &quot;Isabel&quot;&#39;s &quot;score&quot; to it + 20)
@@ -260,7 +266,7 @@ How old are you?
 (set: $kids&#39;s &quot;Rashad&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Mavis&quot;&#39;s &quot;score&quot; to it + 5)
 (goto:(str:$question))]
-&lt;br&gt;&lt;br&gt;
+
 (link:&quot;I&#39;m, like, actually a big kid.&quot;)[
 (set: $kids&#39;s &quot;Gabby&quot;&#39;s &quot;score&quot; to it + 5)
 (set: $kids&#39;s &quot;Miguel&quot;&#39;s &quot;score&quot; to it + 5)
@@ -324,7 +330,7 @@ In a parade, are you more likely to be at the head... or at the butt?
 
 &lt;a href=&quot;https://bookshop.org/pages/bookstores&quot;&gt;Order now from your local bookstore&lt;/a&gt;.
 &lt;a href=&quot;https://treehousekidandcraft.com/products/a-very-good-parade-a-picture-book?_pos=1&amp;_sid=6cf76c19f&amp;_ss=r&quot;&gt;Order a signed copy from Treehouse Kid and Craft&lt;/a&gt;!
-</tw-passagedata><tw-passagedata pid="13" name="start" tags="" position="100,275" size="100,100">&lt;img style=&quot;width: 30vw;&quot; src=&quot;photo of book.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="13" name="start" tags="" position="100,275" size="100,100">&lt;img style=&quot;width: 30vw; max-width: 100%;&quot; src=&quot;photo of book.png&quot;&gt;
 
 Coming out August 18th 2026 from Abrams Books.
 
@@ -335,7 +341,7 @@ Coming out August 18th 2026 from Abrams Books.
 [&lt;h1 style=&quot;padding: 0.5em;margin: 0.5em;
 border: 2px solid #304a68;border-radius: 6px;
 color: #304a68;background-color: transparent;
-text-decoration: none;display:inline;&quot;&gt;TAKE THE PERSONALITY QUIZ!&lt;/h1&gt;]&lt;link|
+text-decoration: none;display:inline-block;&quot;&gt;TAKE THE PERSONALITY QUIZ!&lt;/h1&gt;]&lt;link|
 {
 (click:?link)[(go-to:&quot;1&quot;)]
 
